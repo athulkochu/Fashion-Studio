@@ -212,6 +212,38 @@ export interface SubscribeResponse {
   message: string;
 }
 
+export interface AuthUser {
+  id: number;
+  email: string;
+  name: string;
+  createdAt: string;
+}
+
+export interface AuthResponse {
+  user: AuthUser;
+}
+
+export interface MeResponse {
+  user: AuthUser | null;
+}
+
+export interface SignupInput {
+  email: string;
+  /** @minLength 8 */
+  password: string;
+  /** @minLength 1 */
+  name: string;
+}
+
+export interface LoginInput {
+  email: string;
+  password: string;
+}
+
+export interface AuthLogoutResult {
+  message: string;
+}
+
 export type ListProductsParams = {
   /**
    * Search by name or description

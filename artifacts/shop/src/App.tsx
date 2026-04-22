@@ -11,6 +11,7 @@ import Cart from "@/pages/Cart";
 import Checkout from "@/pages/Checkout";
 import OrderConfirmation from "@/pages/OrderConfirmation";
 import About from "@/pages/About";
+import Auth from "@/pages/Auth";
 import SiteLayout from "@/components/layout/SiteLayout";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,8 @@ function Router() {
         <Route path="/checkout" component={Checkout} />
         <Route path="/order/:orderNumber" component={OrderConfirmation} />
         <Route path="/about" component={About} />
+        <Route path="/login">{() => <Auth initialMode="login" />}</Route>
+        <Route path="/signup">{() => <Auth initialMode="signup" />}</Route>
         <Route component={NotFound} />
       </Switch>
     </SiteLayout>

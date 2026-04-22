@@ -542,6 +542,65 @@ export const GetOrderResponse = zod.object({
 });
 
 /**
+ * @summary Create a new account
+ */
+export const signupBodyPasswordMin = 8;
+
+export const SignupBody = zod.object({
+  email: zod.string().email(),
+  password: zod.string().min(signupBodyPasswordMin),
+  name: zod.string().min(1),
+});
+
+export const SignupResponse = zod.object({
+  user: zod.object({
+    id: zod.number(),
+    email: zod.string(),
+    name: zod.string(),
+    createdAt: zod.coerce.date(),
+  }),
+});
+
+/**
+ * @summary Sign in
+ */
+export const LoginBody = zod.object({
+  email: zod.string().email(),
+  password: zod.string(),
+});
+
+export const LoginResponse = zod.object({
+  user: zod.object({
+    id: zod.number(),
+    email: zod.string(),
+    name: zod.string(),
+    createdAt: zod.coerce.date(),
+  }),
+});
+
+/**
+ * @summary Sign out
+ */
+export const LogoutResponse = zod.object({
+  message: zod.string(),
+});
+
+/**
+ * @summary Get the current user
+ */
+export const GetMeResponse = zod.object({
+  user: zod.union([
+    zod.object({
+      id: zod.number(),
+      email: zod.string(),
+      name: zod.string(),
+      createdAt: zod.coerce.date(),
+    }),
+    zod.null(),
+  ]),
+});
+
+/**
  * @summary Subscribe to the newsletter
  */
 export const SubscribeNewsletterBody = zod.object({
