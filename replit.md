@@ -1,27 +1,28 @@
-# Workspace
+# Lumière — Dress Boutique
 
 ## Overview
 
-pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
+Lumière is a production-quality online dress boutique built on a pnpm + TypeScript monorepo. A React + Vite frontend (the `shop` artifact) consumes a typed Express 5 API backed by PostgreSQL + Drizzle. The OpenAPI spec is the contract source of truth, and React Query hooks plus Zod schemas are generated from it.
 
 ## Stack
 
-- **Monorepo tool**: pnpm workspaces
-- **Node.js version**: 24
-- **Package manager**: pnpm
-- **TypeScript version**: 5.9
-- **API framework**: Express 5
-- **Database**: PostgreSQL + Drizzle ORM
-- **Validation**: Zod (`zod/v4`), `drizzle-zod`
-- **API codegen**: Orval (from OpenAPI spec)
-- **Build**: esbuild (CJS bundle)
+- pnpm workspaces, Node 24, TypeScript 5.9
+- Frontend: React + Vite + Tailwind, wouter, @tanstack/react-query, framer-motion, react-hook-form, zod
+- Backend: Express 5, drizzle-orm, pg, pino
+- Codegen: Orval (React Query hooks + Zod schemas) from `lib/api-spec/openapi.yaml`
 
 ## Key Commands
 
 - `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- `pnpm --filter @workspace/api-server run dev` — run API server locally
+- `pnpm run --filter @workspace/api-spec codegen` — regenerate hooks/schemas from OpenAPI
+- `pnpm --filter @workspace/db run push` — push DB schema (dev)
+- `pnpm --filter @workspace/scripts run seed` — seed dresses, collections
+- Restart `artifacts/api-server: API Server` and `artifacts/shop: web` workflows after server/code changes
 
-See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+## Domain
+
+- Products (dresses) with collections (Evening, Day, Bridal, Resort), facets (color, size, price, category), search and sort
+- Cookie-session cart (`lumiere_cart` httpOnly cookie) with add/update/remove/clear
+- Checkout creates an order; order confirmation page lookup by order number
+- Newsletter subscription
+- Shipping is free over $200, otherwise flat $12 (standard); express/overnight available; tax 8%

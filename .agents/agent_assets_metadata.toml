@@ -1,0 +1,86 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "WqitbmAC8KsU6fXp61r1s"
+uri = "file://artifacts/shop/public/images/hero.png"
+type = "image"
+title = "Hero image of woman in dress"
+
+[[generated]]
+id = "05ENfo4ppjkK94JltH6Xl"
+uri = "file://artifacts/shop/public/images/brand-story.png"
+type = "image"
+title = "Close up of fabric texture"
+
+[[generated]]
+id = "er5cxV-GwJ1d-ckEJTt9-"
+uri = "file://artifacts/shop/public/images/about.png"
+type = "image"
+title = "Moodboard on wooden table"
+
+[[generated]]
+id = "5EuBhPD_JGotdmSTGRLuM"
+uri = "file://artifacts/shop/public/images/newsletter.png"
+type = "image"
+title = "White rose still life"
+
+[[generated]]
+id = "lZ6LlAoHK0_8a15WgHuph"
+uri = "file://artifacts/shop/public/products/sienna-silk-slip.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "zbDLHMP4HM89szsnrBO2A"
+uri = "file://artifacts/shop/public/products/amelie-linen-midi.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "RN4NJrkj-wpLW-mlzr0Lt"
+uri = "file://artifacts/shop/public/products/nocturne-velvet-gown.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "8ELwQlGHM_OHGOw-imxlq"
+uri = "file://artifacts/shop/public/products/meadow-cotton-sundress.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "6B42mTrvcoKBXSyF2eTyq"
+uri = "file://artifacts/shop/public/products/aurelia-satin-bias.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "M7xi9djg8kFd7tDRouyts"
+uri = "file://artifacts/shop/public/products/coquelicot-poppy-dress.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "G-bOTQaVcq6t3a1sjJkPi"
+uri = "file://artifacts/shop/public/products/bryony-tea-dress.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "KxwC81Gwad-E0tKF1ttn2"
+uri = "file://artifacts/shop/public/products/isolde-bridal-gown.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "Jcn1r92VM4CEDS853H8XX"
+uri = "file://artifacts/shop/public/products/maren-poplin-shirtdress.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "jMvvqQd9O9gLwsPNuOnH1"
+uri = "file://artifacts/shop/public/products/selene-black-mini.png"
+type = "image"
+title = "generated_image"
